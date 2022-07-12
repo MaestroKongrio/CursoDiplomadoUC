@@ -72,7 +72,6 @@ contract PreSale is Ownable {
     
     function aportar() payable public {
         require(!liquidando,"Los aportes estan cerrados");
-        require(msg.value >= 1 ether,"Su aporte es muy bajo");
         aporte[msg.sender] += msg.value;
         saldo += msg.value;
     }
